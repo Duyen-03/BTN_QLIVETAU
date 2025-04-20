@@ -62,11 +62,6 @@ namespace BTN_QLIVETAU
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -132,32 +127,6 @@ namespace BTN_QLIVETAU
             string sql = $"SELECT * FROM KHACHHANG WHERE HoTen LIKE N'%{txtTimKiem.Text}%' OR SoDienThoai LIKE '%{txtTimKiem.Text}%' OR Email LIKE '%{txtTimKiem.Text}%'";
             dgvKhachHang.DataSource = ketNoi.Lay_DuLieuBang(sql);
             ketNoi.HuyKetNoi();
-        }
-
-        private void btnXemVe_Click(object sender, EventArgs e)
-        {
-            if (dgvKhachHang.SelectedRows.Count == 0)
-            {
-                MessageBox.Show("Vui lòng chọn khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            string tenDangNhap = dgvKhachHang.SelectedRows[0].Cells["TenDangNhap"].Value.ToString();
-            string sql = $"SELECT * FROM V_VETAUCHITIET WHERE KhachHang = '{tenDangNhap}'";
-            DataTable ve = ketNoi.Lay_DuLieuBang(sql);
-            ketNoi.HuyKetNoi();
-
-            if (ve.Rows.Count > 0)
-            {
-                Form formVe = new Form { Text = $"Vé của {tenDangNhap}" };
-                DataGridView dgvVe = new DataGridView { Dock = DockStyle.Fill, DataSource = ve };
-                formVe.Controls.Add(dgvVe);
-                formVe.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Khách hàng này chưa đặt vé nào!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
         }
 
         private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)

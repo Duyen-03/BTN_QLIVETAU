@@ -37,7 +37,6 @@
             this.kHACHHANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLI_VETAUDataSet2 = new BTN_QLIVETAU.QLI_VETAUDataSet2();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnXemVe = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
@@ -49,8 +48,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.kHACHHANGTableAdapter = new BTN_QLIVETAU.QLI_VETAUDataSet2TableAdapters.KHACHHANGTableAdapter();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACHHANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLI_VETAUDataSet2)).BeginInit();
@@ -66,12 +65,11 @@
             this.soDienThoaiDataGridViewTextBoxColumn,
             this.emailDataGridViewTextBoxColumn});
             this.dgvKhachHang.DataSource = this.kHACHHANGBindingSource;
-            this.dgvKhachHang.Location = new System.Drawing.Point(131, 166);
-            this.dgvKhachHang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvKhachHang.Location = new System.Drawing.Point(12, 89);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
-            this.dgvKhachHang.Size = new System.Drawing.Size(927, 188);
+            this.dgvKhachHang.Size = new System.Drawing.Size(1042, 224);
             this.dgvKhachHang.TabIndex = 31;
             this.dgvKhachHang.SelectionChanged += new System.EventHandler(this.dgvKhachHang_SelectionChanged);
             // 
@@ -119,32 +117,19 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(456, 98);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTimKiem.Location = new System.Drawing.Point(456, 36);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(94, 35);
+            this.btnTimKiem.Size = new System.Drawing.Size(84, 28);
             this.btnTimKiem.TabIndex = 30;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // btnXemVe
-            // 
-            this.btnXemVe.Location = new System.Drawing.Point(893, 563);
-            this.btnXemVe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnXemVe.Name = "btnXemVe";
-            this.btnXemVe.Size = new System.Drawing.Size(97, 40);
-            this.btnXemVe.TabIndex = 29;
-            this.btnXemVe.Text = "Xem vé";
-            this.btnXemVe.UseVisualStyleBackColor = true;
-            this.btnXemVe.Click += new System.EventHandler(this.btnXemVe_Click);
-            // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(679, 565);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnXoa.Location = new System.Drawing.Point(476, 489);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(90, 39);
+            this.btnXoa.Size = new System.Drawing.Size(80, 31);
             this.btnXoa.TabIndex = 28;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -152,10 +137,9 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(456, 565);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSua.Location = new System.Drawing.Point(262, 489);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(97, 39);
+            this.btnSua.Size = new System.Drawing.Size(86, 31);
             this.btnSua.TabIndex = 27;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -163,10 +147,9 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(230, 563);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThem.Location = new System.Drawing.Point(62, 488);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(97, 40);
+            this.btnThem.Size = new System.Drawing.Size(86, 32);
             this.btnThem.TabIndex = 26;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -175,92 +158,87 @@
             // txtEmail
             // 
             this.txtEmail.AutoSize = true;
-            this.txtEmail.Location = new System.Drawing.Point(626, 465);
+            this.txtEmail.Location = new System.Drawing.Point(496, 426);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(52, 20);
+            this.txtEmail.Size = new System.Drawing.Size(44, 16);
             this.txtEmail.TabIndex = 25;
             this.txtEmail.Text = "Email:";
             // 
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.AutoSize = true;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(626, 409);
+            this.txtSoDienThoai.Location = new System.Drawing.Point(496, 347);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(45, 20);
+            this.txtSoDienThoai.Size = new System.Drawing.Size(38, 16);
             this.txtSoDienThoai.TabIndex = 24;
             this.txtSoDienThoai.Text = "SDT:";
             // 
             // txtHoTen
             // 
             this.txtHoTen.AutoSize = true;
-            this.txtHoTen.Location = new System.Drawing.Point(231, 465);
+            this.txtHoTen.Location = new System.Drawing.Point(59, 423);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(61, 20);
+            this.txtHoTen.Size = new System.Drawing.Size(49, 16);
             this.txtHoTen.TabIndex = 23;
             this.txtHoTen.Text = "Họ tên:";
             // 
             // txtTenDangNhap
             // 
             this.txtTenDangNhap.AutoSize = true;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(231, 409);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(59, 353);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(120, 20);
+            this.txtTenDangNhap.Size = new System.Drawing.Size(101, 16);
             this.txtTenDangNhap.TabIndex = 22;
             this.txtTenDangNhap.Text = "Tên đăng nhập:";
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(349, 457);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox6.Location = new System.Drawing.Point(201, 420);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(165, 26);
+            this.textBox6.Size = new System.Drawing.Size(147, 22);
             this.textBox6.TabIndex = 21;
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(349, 402);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox5.Location = new System.Drawing.Point(201, 350);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 26);
+            this.textBox5.Size = new System.Drawing.Size(147, 22);
             this.textBox5.TabIndex = 20;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(774, 406);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox4.Location = new System.Drawing.Point(605, 347);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 26);
+            this.textBox4.Size = new System.Drawing.Size(155, 22);
             this.textBox4.TabIndex = 19;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(774, 457);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox3.Location = new System.Drawing.Point(605, 423);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 26);
+            this.textBox3.Size = new System.Drawing.Size(155, 22);
             this.textBox3.TabIndex = 18;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Location = new System.Drawing.Point(198, 102);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(202, 26);
-            this.txtTimKiem.TabIndex = 17;
-            this.txtTimKiem.Text = "Tìm khách hàng";
             // 
             // kHACHHANGTableAdapter
             // 
             this.kHACHHANGTableAdapter.ClearBeforeFill = true;
             // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Location = new System.Drawing.Point(76, 36);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(272, 22);
+            this.txtTimKiem.TabIndex = 32;
+            this.txtTimKiem.Text = "Nhập thông tin muốn tìm";
+            // 
             // frm_QUANLYKHACHHANG
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1199, 741);
+            this.ClientSize = new System.Drawing.Size(1066, 593);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dgvKhachHang);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.btnXemVe);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
@@ -272,7 +250,7 @@
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.txtTimKiem);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_QUANLYKHACHHANG";
             this.Text = "frm_QUANLYKHACHHANG";
             this.Load += new System.EventHandler(this.frm_QUANLYKHACHHANG_Load);
@@ -288,7 +266,6 @@
 
         private System.Windows.Forms.DataGridView dgvKhachHang;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.Button btnXemVe;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
@@ -300,7 +277,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox txtTimKiem;
         private QLI_VETAUDataSet2 qLI_VETAUDataSet2;
         private System.Windows.Forms.BindingSource kHACHHANGBindingSource;
         private QLI_VETAUDataSet2TableAdapters.KHACHHANGTableAdapter kHACHHANGTableAdapter;
@@ -308,5 +284,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soDienThoaiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox txtTimKiem;
     }
 }

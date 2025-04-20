@@ -141,7 +141,7 @@ namespace BTN_QLIVETAU
 
         private void btnChuyendi_Click(object sender, EventArgs e)
         {
-            frm_QUANLYCHUYENDI frm6 = new frm_QUANLYCHUYENDI();
+            frm_QuanLyChuyenDi frm6 = new frm_QuanLyChuyenDi();
             frm6.Show();
         }
     }

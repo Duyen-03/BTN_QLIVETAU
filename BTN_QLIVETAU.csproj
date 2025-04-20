@@ -94,11 +94,11 @@
     <Compile Include="frm_GATAU.Designer.cs">
       <DependentUpon>frm_GATAU.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_QUANLYCHUYENDI.cs">
+    <Compile Include="frm_QuanLyChuyenDi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_QUANLYCHUYENDI.Designer.cs">
-      <DependentUpon>frm_QUANLYCHUYENDI.cs</DependentUpon>
+    <Compile Include="frm_QuanLyChuyenDi.Designer.cs">
+      <DependentUpon>frm_QuanLyChuyenDi.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_QUANLYKHACHHANG.cs">
       <SubType>Form</SubType>
@@ -117,6 +117,12 @@
     </Compile>
     <Compile Include="frm_QuanLyTau.Designer.cs">
       <DependentUpon>frm_QuanLyTau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_SuaChuyenDi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_SuaChuyenDi.Designer.cs">
+      <DependentUpon>frm_SuaChuyenDi.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_SuaLichTrinh.cs">
       <SubType>Form</SubType>
@@ -205,8 +211,8 @@
     <EmbeddedResource Include="frm_GATAU.resx">
       <DependentUpon>frm_GATAU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_QUANLYCHUYENDI.resx">
-      <DependentUpon>frm_QUANLYCHUYENDI.cs</DependentUpon>
+    <EmbeddedResource Include="frm_QuanLyChuyenDi.resx">
+      <DependentUpon>frm_QuanLyChuyenDi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QUANLYKHACHHANG.resx">
       <DependentUpon>frm_QUANLYKHACHHANG.cs</DependentUpon>
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QuanLyTau.resx">
       <DependentUpon>frm_QuanLyTau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_SuaChuyenDi.resx">
+      <DependentUpon>frm_SuaChuyenDi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_SuaLichTrinh.resx">
       <DependentUpon>frm_SuaLichTrinh.cs</DependentUpon>
