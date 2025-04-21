@@ -213,6 +213,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QuanLyChuyenDi.resx">
       <DependentUpon>frm_QuanLyChuyenDi.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_QUANLYKHACHHANG.resx">
       <DependentUpon>frm_QUANLYKHACHHANG.cs</DependentUpon>

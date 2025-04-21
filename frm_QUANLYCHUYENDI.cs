@@ -18,7 +18,8 @@ namespace BTN_QLIVETAU
         }
 
         KETNOI_DULIEU kn = new KETNOI_DULIEU();
-        private void frm_QuanLyChuyenDi_Load(object sender, EventArgs e)
+
+        private void frm_QUANLYCHUYENDI_Load(object sender, EventArgs e)
         {
             HienThiDuLieu();
             LoadLichTrinhToComboBox();
@@ -37,7 +38,7 @@ namespace BTN_QLIVETAU
                 LICHTRINH L
                 JOIN GATAU G1 ON L.GaDi = G1.MaGa
                 JOIN GATAU G2 ON L.GaDen = G2.MaGa";
-            DataTable lichTrinhTable = kn.Lay_DuLieuBang(query);           
+            DataTable lichTrinhTable = kn.Lay_DuLieuBang(query);
             CBO_LichTrinh.DisplayMember = "MoTa";
             CBO_LichTrinh.ValueMember = "MaLichTrinh";
             CBO_LichTrinh.DataSource = lichTrinhTable;
@@ -47,9 +48,9 @@ namespace BTN_QLIVETAU
         private void LoadTauToComboBox()
         {
             DataTable tauTable = kn.Lay_DuLieuBang("SELECT MaTau, TenTau FROM TAU");
-            CBO_Tau.DataSource = tauTable;
             CBO_Tau.DisplayMember = "TenTau";
             CBO_Tau.ValueMember = "MaTau";
+            CBO_Tau.DataSource = tauTable;
             CBO_Tau.SelectedIndex = -1;
         }
 
@@ -126,7 +127,7 @@ namespace BTN_QLIVETAU
         {
             if (dgv_DanhSachChuyenDi.SelectedRows.Count > 0)
             {
-                string maChuyenDi = dgv_DanhSachChuyenDi.SelectedRows[0].Cells["MaChuyenDi"].Value.ToString();
+                string maChuyenDi = dgv_DanhSachChuyenDi.SelectedRows[0].Cells["maChuyenDiDataGridViewTextBoxColumn"].Value.ToString();
                 DialogResult result = MessageBox.Show($"Bạn có chắc chắn muốn xóa chuyến đi có mã '{maChuyenDi}' không?",
                                                       "Xác nhận xóa",
                                                       MessageBoxButtons.YesNo,
@@ -158,7 +159,7 @@ namespace BTN_QLIVETAU
         {
             if (dgv_DanhSachChuyenDi.SelectedRows.Count > 0)
             {
-                string maChuyenDi = dgv_DanhSachChuyenDi.SelectedRows[0].Cells["MaChuyenDi"].Value.ToString();
+                string maChuyenDi = dgv_DanhSachChuyenDi.SelectedRows[0].Cells["maChuyenDiDataGridViewTextBoxColumn"].Value.ToString();
                 frm_SuaChuyenDi frmSua = new frm_SuaChuyenDi();
                 frmSua.MaChuyenDi = maChuyenDi;
                 frmSua.ShowDialog();
@@ -214,6 +215,11 @@ namespace BTN_QLIVETAU
                 dgv_DanhSachChuyenDi.CurrentCell = dgv_DanhSachChuyenDi.Rows[e.RowIndex].Cells[0];
                 HienThiChiTiet();
             }
+        }
+
+        private void frm_QUANLYCHUYENDI_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
