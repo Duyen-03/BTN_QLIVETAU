@@ -33,9 +33,9 @@ namespace BTN_QLIVETAU
         }
 
 
-        private void btnThem_Click_1(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtTenDangNhap.Text) || string.IsNullOrEmpty(txtHoTen.Text))
+            if (string.IsNullOrEmpty(label_TenDangNhap.Text) || string.IsNullOrEmpty(label_HoTen.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên đăng nhập và họ tên!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -44,12 +44,12 @@ namespace BTN_QLIVETAU
             try
             {
                 // Thêm vào bảng TAIKHOAN trước
-                string sqlTaiKhoan = $"INSERT INTO TAIKHOAN (TenDangNhap, MatKhau) VALUES ('{txtTenDangNhap.Text}', 'default123')";
+                string sqlTaiKhoan = $"INSERT INTO TAIKHOAN (TenDangNhap, MatKhau) VALUES ('{label_TenDangNhap.Text}', 'default123')";
                 ketNoi.ThucThi(sqlTaiKhoan);
 
                 // Thêm vào bảng KHACHHANG
                 string sqlKhachHang = $"INSERT INTO KHACHHANG (TenDangNhap, HoTen, SoDienThoai, Email) VALUES " +
-                    $"('{txtTenDangNhap.Text}', N'{txtHoTen.Text}', '{txtSoDienThoai.Text}', '{txtEmail.Text}')";
+                    $"('{label_TenDangNhap.Text}', N'{label_HoTen.Text}', '{label_SDT.Text}', '{label_Email.Text}')";
                 ketNoi.ThucThi(sqlKhachHang);
 
                 MessageBox.Show("Thêm khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -73,8 +73,8 @@ namespace BTN_QLIVETAU
 
             try
             {
-                string sql = $"UPDATE KHACHHANG SET HoTen = N'{txtHoTen.Text}', SoDienThoai = '{txtSoDienThoai.Text}', " +
-                    $"Email = '{txtEmail.Text}' WHERE TenDangNhap = '{txtTenDangNhap.Text}'";
+                string sql = $"UPDATE KHACHHANG SET HoTen = N'{label_HoTen.Text}', SoDienThoai = '{label_SDT.Text}', " +
+                    $"Email = '{label_Email.Text}' WHERE TenDangNhap = '{label_TenDangNhap.Text}'";
                 ketNoi.ThucThi(sql);
                 MessageBox.Show("Sửa khách hàng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 TaiDanhSachKhachHang();
@@ -134,22 +134,22 @@ namespace BTN_QLIVETAU
             if (dgvKhachHang.SelectedRows.Count > 0)
             {
                 var row = dgvKhachHang.SelectedRows[0];
-                txtTenDangNhap.Text = row.Cells["TenDangNhap"].Value.ToString();
-                txtHoTen.Text = row.Cells["HoTen"].Value.ToString();
-                txtSoDienThoai.Text = row.Cells["SoDienThoai"].Value?.ToString();
-                txtEmail.Text = row.Cells["Email"].Value?.ToString();
+                label_TenDangNhap.Text = row.Cells["TenDangNhap"].Value.ToString();
+                label_HoTen.Text = row.Cells["HoTen"].Value.ToString();
+                label_SDT.Text = row.Cells["SoDienThoai"].Value?.ToString();
+                label_Email.Text = row.Cells["Email"].Value?.ToString();
             }
         }
         private void XoaInput()
         {
             txtTimKiem.Clear(); // TextBox
 
-            txtTenDangNhap.Text = ""; // nếu là Label
-            txtHoTen.Text = "";
-            txtSoDienThoai.Text = "";
-            txtEmail.Text = "";
+            label_TenDangNhap.Text = ""; // nếu là Label
+            label_HoTen.Text = "";
+            label_SDT.Text = "";
+            label_Email.Text = "";
         }
 
-
+        
     }
 }

@@ -40,14 +40,14 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.txtEmail = new System.Windows.Forms.Label();
-            this.txtSoDienThoai = new System.Windows.Forms.Label();
-            this.txtHoTen = new System.Windows.Forms.Label();
-            this.txtTenDangNhap = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label_Email = new System.Windows.Forms.Label();
+            this.label_SDT = new System.Windows.Forms.Label();
+            this.label_HoTen = new System.Windows.Forms.Label();
+            this.label_TenDangNhap = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
+            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.kHACHHANGTableAdapter = new BTN_QLIVETAU.QLI_VETAUDataSet2TableAdapters.KHACHHANGTableAdapter();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
@@ -153,71 +153,71 @@
             this.btnThem.TabIndex = 26;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // txtEmail
+            // label_Email
             // 
-            this.txtEmail.AutoSize = true;
-            this.txtEmail.Location = new System.Drawing.Point(496, 426);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(44, 16);
-            this.txtEmail.TabIndex = 25;
-            this.txtEmail.Text = "Email:";
+            this.label_Email.AutoSize = true;
+            this.label_Email.Location = new System.Drawing.Point(496, 426);
+            this.label_Email.Name = "label_Email";
+            this.label_Email.Size = new System.Drawing.Size(44, 16);
+            this.label_Email.TabIndex = 25;
+            this.label_Email.Text = "Email:";
             // 
-            // txtSoDienThoai
+            // label_SDT
             // 
-            this.txtSoDienThoai.AutoSize = true;
-            this.txtSoDienThoai.Location = new System.Drawing.Point(496, 347);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(38, 16);
-            this.txtSoDienThoai.TabIndex = 24;
-            this.txtSoDienThoai.Text = "SDT:";
+            this.label_SDT.AutoSize = true;
+            this.label_SDT.Location = new System.Drawing.Point(496, 347);
+            this.label_SDT.Name = "label_SDT";
+            this.label_SDT.Size = new System.Drawing.Size(38, 16);
+            this.label_SDT.TabIndex = 24;
+            this.label_SDT.Text = "SDT:";
+            // 
+            // label_HoTen
+            // 
+            this.label_HoTen.AutoSize = true;
+            this.label_HoTen.Location = new System.Drawing.Point(59, 423);
+            this.label_HoTen.Name = "label_HoTen";
+            this.label_HoTen.Size = new System.Drawing.Size(49, 16);
+            this.label_HoTen.TabIndex = 23;
+            this.label_HoTen.Text = "Họ tên:";
+            // 
+            // label_TenDangNhap
+            // 
+            this.label_TenDangNhap.AutoSize = true;
+            this.label_TenDangNhap.Location = new System.Drawing.Point(59, 353);
+            this.label_TenDangNhap.Name = "label_TenDangNhap";
+            this.label_TenDangNhap.Size = new System.Drawing.Size(101, 16);
+            this.label_TenDangNhap.TabIndex = 22;
+            this.label_TenDangNhap.Text = "Tên đăng nhập:";
             // 
             // txtHoTen
             // 
-            this.txtHoTen.AutoSize = true;
-            this.txtHoTen.Location = new System.Drawing.Point(59, 423);
+            this.txtHoTen.Location = new System.Drawing.Point(201, 420);
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(49, 16);
-            this.txtHoTen.TabIndex = 23;
-            this.txtHoTen.Text = "Họ tên:";
+            this.txtHoTen.Size = new System.Drawing.Size(147, 22);
+            this.txtHoTen.TabIndex = 21;
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.AutoSize = true;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(59, 353);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(201, 350);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.Size = new System.Drawing.Size(101, 16);
-            this.txtTenDangNhap.TabIndex = 22;
-            this.txtTenDangNhap.Text = "Tên đăng nhập:";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(147, 22);
+            this.txtTenDangNhap.TabIndex = 20;
             // 
-            // textBox6
+            // txtSoDienThoai
             // 
-            this.textBox6.Location = new System.Drawing.Point(201, 420);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(147, 22);
-            this.textBox6.TabIndex = 21;
+            this.txtSoDienThoai.Location = new System.Drawing.Point(605, 347);
+            this.txtSoDienThoai.Name = "txtSoDienThoai";
+            this.txtSoDienThoai.Size = new System.Drawing.Size(155, 22);
+            this.txtSoDienThoai.TabIndex = 19;
             // 
-            // textBox5
+            // txtEmail
             // 
-            this.textBox5.Location = new System.Drawing.Point(201, 350);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(147, 22);
-            this.textBox5.TabIndex = 20;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(605, 347);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(155, 22);
-            this.textBox4.TabIndex = 19;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(605, 423);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 22);
-            this.textBox3.TabIndex = 18;
+            this.txtEmail.Location = new System.Drawing.Point(605, 423);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(155, 22);
+            this.txtEmail.TabIndex = 18;
             // 
             // kHACHHANGTableAdapter
             // 
@@ -242,14 +242,14 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.label_Email);
+            this.Controls.Add(this.label_SDT);
+            this.Controls.Add(this.label_HoTen);
+            this.Controls.Add(this.label_TenDangNhap);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtTenDangNhap);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.txtEmail);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_QUANLYKHACHHANG";
             this.Text = "frm_QUANLYKHACHHANG";
@@ -269,14 +269,14 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label txtEmail;
-        private System.Windows.Forms.Label txtSoDienThoai;
-        private System.Windows.Forms.Label txtHoTen;
-        private System.Windows.Forms.Label txtTenDangNhap;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label_Email;
+        private System.Windows.Forms.Label label_SDT;
+        private System.Windows.Forms.Label label_HoTen;
+        private System.Windows.Forms.Label label_TenDangNhap;
+        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
+        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.TextBox txtEmail;
         private QLI_VETAUDataSet2 qLI_VETAUDataSet2;
         private System.Windows.Forms.BindingSource kHACHHANGBindingSource;
         private QLI_VETAUDataSet2TableAdapters.KHACHHANGTableAdapter kHACHHANGTableAdapter;
