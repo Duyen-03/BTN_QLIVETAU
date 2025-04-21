@@ -217,9 +217,6 @@ namespace BTN_QLIVETAU
             }
         }
 
-        private void frm_QUANLYCHUYENDI_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
