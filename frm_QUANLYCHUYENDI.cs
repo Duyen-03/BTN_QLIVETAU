@@ -37,10 +37,10 @@ namespace BTN_QLIVETAU
                 LICHTRINH L
                 JOIN GATAU G1 ON L.GaDi = G1.MaGa
                 JOIN GATAU G2 ON L.GaDen = G2.MaGa";
-            DataTable lichTrinhTable = kn.Lay_DuLieuBang(query);
-            CBO_LichTrinh.DataSource = lichTrinhTable;
+            DataTable lichTrinhTable = kn.Lay_DuLieuBang(query);           
             CBO_LichTrinh.DisplayMember = "MoTa";
             CBO_LichTrinh.ValueMember = "MaLichTrinh";
+            CBO_LichTrinh.DataSource = lichTrinhTable;
             CBO_LichTrinh.SelectedIndex = -1;
         }
 
@@ -72,10 +72,10 @@ namespace BTN_QLIVETAU
             if (dgv_DanhSachChuyenDi.CurrentRow != null)
             {
                 DataGridViewRow row = dgv_DanhSachChuyenDi.CurrentRow;
-                TXT_MaChuyenDi.Text = row.Cells["MaChuyenDi"].Value?.ToString();
-                CBO_LichTrinh.SelectedValue = row.Cells["MaLichTrinh"].Value;
-                CBO_Tau.SelectedValue = row.Cells["MaTau"].Value;
-                TXT_GiaCoBan.Text = row.Cells["GiaCoBan"].Value?.ToString();
+                TXT_MaChuyenDi.Text = row.Cells["maChuyenDiDataGridViewTextBoxColumn"].Value?.ToString();
+                CBO_LichTrinh.SelectedValue = row.Cells["maLichTrinhDataGridViewTextBoxColumn"].Value;
+                CBO_Tau.SelectedValue = row.Cells["maTauDataGridViewTextBoxColumn"].Value;
+                TXT_GiaCoBan.Text = row.Cells["giaCoBanDataGridViewTextBoxColumn"].Value?.ToString();
             }
         }
 
@@ -84,6 +84,18 @@ namespace BTN_QLIVETAU
             if (string.IsNullOrEmpty(CBO_LichTrinh.Text) || string.IsNullOrEmpty(CBO_Tau.Text) || string.IsNullOrEmpty(TXT_GiaCoBan.Text))
             {
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (CBO_LichTrinh.SelectedValue == null)
+            {
+                MessageBox.Show("Lỗi: Chưa chọn lịch trình.");
+                return;
+            }
+
+            if (CBO_Tau.SelectedValue == null)
+            {
+                MessageBox.Show("Lỗi: Chưa chọn tàu.");
                 return;
             }
 
@@ -202,11 +214,6 @@ namespace BTN_QLIVETAU
                 dgv_DanhSachChuyenDi.CurrentCell = dgv_DanhSachChuyenDi.Rows[e.RowIndex].Cells[0];
                 HienThiChiTiet();
             }
-        }
-
-        private void frm_QUANLYCHUYENDI_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

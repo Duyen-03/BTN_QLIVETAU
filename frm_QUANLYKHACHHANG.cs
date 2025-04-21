@@ -95,7 +95,7 @@ namespace BTN_QLIVETAU
                 return;
             }
 
-            string tenDangNhap = dgvKhachHang.SelectedRows[0].Cells["TenDangNhap"].Value.ToString();
+            string tenDangNhap = dgvKhachHang.SelectedRows[0].Cells["tenDangNhapDataGridViewTextBoxColumn"].Value.ToString();
             if (MessageBox.Show($"Bạn có chắc muốn xóa khách hàng {tenDangNhap}?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
@@ -134,10 +134,10 @@ namespace BTN_QLIVETAU
             if (dgvKhachHang.SelectedRows.Count > 0)
             {
                 var row = dgvKhachHang.SelectedRows[0];
-                txtTenDangNhap.Text = row.Cells["TenDangNhap"].Value.ToString();
-                txtHoTen.Text = row.Cells["HoTen"].Value.ToString();
-                txtSDT.Text = row.Cells["SoDienThoai"].Value?.ToString();
-                txtEmail.Text = row.Cells["Email"].Value?.ToString();
+                txtTenDangNhap.Text = row.Cells["tenDangNhapDataGridViewTextBoxColumn"].Value.ToString();
+                txtHoTen.Text = row.Cells["hoTenDataGridViewTextBoxColumn"].Value.ToString();
+                txtSDT.Text = row.Cells["soDienThoaiDataGridViewTextBoxColumn"].Value?.ToString();
+                txtEmail.Text = row.Cells["emailDataGridViewTextBoxColumn"].Value?.ToString();
             }
         }
         private void XoaInput()

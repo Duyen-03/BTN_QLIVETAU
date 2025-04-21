@@ -58,6 +58,7 @@
             // dgvKhachHang
             // 
             this.dgvKhachHang.AutoGenerateColumns = false;
+            this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tenDangNhapDataGridViewTextBoxColumn,
@@ -69,6 +70,7 @@
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.RowHeadersWidth = 51;
             this.dgvKhachHang.RowTemplate.Height = 24;
+            this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(1042, 224);
             this.dgvKhachHang.TabIndex = 31;
             this.dgvKhachHang.SelectionChanged += new System.EventHandler(this.dgvKhachHang_SelectionChanged);
@@ -79,7 +81,6 @@
             this.tenDangNhapDataGridViewTextBoxColumn.HeaderText = "TenDangNhap";
             this.tenDangNhapDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.tenDangNhapDataGridViewTextBoxColumn.Name = "tenDangNhapDataGridViewTextBoxColumn";
-            this.tenDangNhapDataGridViewTextBoxColumn.Width = 150;
             // 
             // hoTenDataGridViewTextBoxColumn
             // 
@@ -87,7 +88,6 @@
             this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
             this.hoTenDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            this.hoTenDataGridViewTextBoxColumn.Width = 150;
             // 
             // soDienThoaiDataGridViewTextBoxColumn
             // 
@@ -95,7 +95,6 @@
             this.soDienThoaiDataGridViewTextBoxColumn.HeaderText = "SoDienThoai";
             this.soDienThoaiDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.soDienThoaiDataGridViewTextBoxColumn.Name = "soDienThoaiDataGridViewTextBoxColumn";
-            this.soDienThoaiDataGridViewTextBoxColumn.Width = 150;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -103,7 +102,6 @@
             this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
             this.emailDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 150;
             // 
             // kHACHHANGBindingSource
             // 
