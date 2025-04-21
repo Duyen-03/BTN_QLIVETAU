@@ -31,6 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.TXT_MaChuyenDi = new System.Windows.Forms.TextBox();
             this.dgv_DanhSachChuyenDi = new System.Windows.Forms.DataGridView();
+            this.maChuyenDiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maLichTrinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaCoBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cHUYENDIBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLI_VETAUDataSet1 = new BTN_QLIVETAU.QLI_VETAUDataSet1();
             this.btn_Them = new System.Windows.Forms.Button();
             this.CBO_LichTrinh = new System.Windows.Forms.ComboBox();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -39,16 +45,10 @@
             this.btn_TimKiem = new System.Windows.Forms.Button();
             this.TXT_GiaCoBan = new System.Windows.Forms.TextBox();
             this.CBO_Tau = new System.Windows.Forms.ComboBox();
-            this.qLI_VETAUDataSet1 = new BTN_QLIVETAU.QLI_VETAUDataSet1();
-            this.cHUYENDIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cHUYENDITableAdapter = new BTN_QLIVETAU.QLI_VETAUDataSet1TableAdapters.CHUYENDITableAdapter();
-            this.maChuyenDiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maLichTrinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaCoBanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachChuyenDi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLI_VETAUDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYENDIBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLI_VETAUDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXT_MaChuyenDi
@@ -76,6 +76,49 @@
             this.dgv_DanhSachChuyenDi.Size = new System.Drawing.Size(1050, 222);
             this.dgv_DanhSachChuyenDi.TabIndex = 1;
             this.dgv_DanhSachChuyenDi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_DanhSachChuyenDi_CellClick);
+            // 
+            // maChuyenDiDataGridViewTextBoxColumn
+            // 
+            this.maChuyenDiDataGridViewTextBoxColumn.DataPropertyName = "MaChuyenDi";
+            this.maChuyenDiDataGridViewTextBoxColumn.HeaderText = "MaChuyenDi";
+            this.maChuyenDiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maChuyenDiDataGridViewTextBoxColumn.Name = "maChuyenDiDataGridViewTextBoxColumn";
+            this.maChuyenDiDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maChuyenDiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maLichTrinhDataGridViewTextBoxColumn
+            // 
+            this.maLichTrinhDataGridViewTextBoxColumn.DataPropertyName = "MaLichTrinh";
+            this.maLichTrinhDataGridViewTextBoxColumn.HeaderText = "MaLichTrinh";
+            this.maLichTrinhDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maLichTrinhDataGridViewTextBoxColumn.Name = "maLichTrinhDataGridViewTextBoxColumn";
+            this.maLichTrinhDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // maTauDataGridViewTextBoxColumn
+            // 
+            this.maTauDataGridViewTextBoxColumn.DataPropertyName = "MaTau";
+            this.maTauDataGridViewTextBoxColumn.HeaderText = "MaTau";
+            this.maTauDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.maTauDataGridViewTextBoxColumn.Name = "maTauDataGridViewTextBoxColumn";
+            this.maTauDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // giaCoBanDataGridViewTextBoxColumn
+            // 
+            this.giaCoBanDataGridViewTextBoxColumn.DataPropertyName = "GiaCoBan";
+            this.giaCoBanDataGridViewTextBoxColumn.HeaderText = "GiaCoBan";
+            this.giaCoBanDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.giaCoBanDataGridViewTextBoxColumn.Name = "giaCoBanDataGridViewTextBoxColumn";
+            this.giaCoBanDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cHUYENDIBindingSource
+            // 
+            this.cHUYENDIBindingSource.DataMember = "CHUYENDI";
+            this.cHUYENDIBindingSource.DataSource = this.qLI_VETAUDataSet1;
+            // 
+            // qLI_VETAUDataSet1
+            // 
+            this.qLI_VETAUDataSet1.DataSetName = "QLI_VETAUDataSet1";
+            this.qLI_VETAUDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btn_Them
             // 
@@ -153,52 +196,9 @@
             this.CBO_Tau.TabIndex = 9;
             this.CBO_Tau.Text = "Chọn tàu";
             // 
-            // qLI_VETAUDataSet1
-            // 
-            this.qLI_VETAUDataSet1.DataSetName = "QLI_VETAUDataSet1";
-            this.qLI_VETAUDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cHUYENDIBindingSource
-            // 
-            this.cHUYENDIBindingSource.DataMember = "CHUYENDI";
-            this.cHUYENDIBindingSource.DataSource = this.qLI_VETAUDataSet1;
-            // 
             // cHUYENDITableAdapter
             // 
             this.cHUYENDITableAdapter.ClearBeforeFill = true;
-            // 
-            // maChuyenDiDataGridViewTextBoxColumn
-            // 
-            this.maChuyenDiDataGridViewTextBoxColumn.DataPropertyName = "MaChuyenDi";
-            this.maChuyenDiDataGridViewTextBoxColumn.HeaderText = "MaChuyenDi";
-            this.maChuyenDiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maChuyenDiDataGridViewTextBoxColumn.Name = "maChuyenDiDataGridViewTextBoxColumn";
-            this.maChuyenDiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maChuyenDiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maLichTrinhDataGridViewTextBoxColumn
-            // 
-            this.maLichTrinhDataGridViewTextBoxColumn.DataPropertyName = "MaLichTrinh";
-            this.maLichTrinhDataGridViewTextBoxColumn.HeaderText = "MaLichTrinh";
-            this.maLichTrinhDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maLichTrinhDataGridViewTextBoxColumn.Name = "maLichTrinhDataGridViewTextBoxColumn";
-            this.maLichTrinhDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // maTauDataGridViewTextBoxColumn
-            // 
-            this.maTauDataGridViewTextBoxColumn.DataPropertyName = "MaTau";
-            this.maTauDataGridViewTextBoxColumn.HeaderText = "MaTau";
-            this.maTauDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maTauDataGridViewTextBoxColumn.Name = "maTauDataGridViewTextBoxColumn";
-            this.maTauDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // giaCoBanDataGridViewTextBoxColumn
-            // 
-            this.giaCoBanDataGridViewTextBoxColumn.DataPropertyName = "GiaCoBan";
-            this.giaCoBanDataGridViewTextBoxColumn.HeaderText = "GiaCoBan";
-            this.giaCoBanDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.giaCoBanDataGridViewTextBoxColumn.Name = "giaCoBanDataGridViewTextBoxColumn";
-            this.giaCoBanDataGridViewTextBoxColumn.Width = 125;
             // 
             // frm_QuanLyChuyenDi
             // 
@@ -220,8 +220,8 @@
             this.Text = "frm_QuanLyChuyenDi";
             this.Load += new System.EventHandler(this.frm_QUANLYCHUYENDI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DanhSachChuyenDi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLI_VETAUDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYENDIBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLI_VETAUDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
