@@ -46,7 +46,7 @@
             this.label_TenDangNhap = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
-            this.txtSoDienThoai = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.kHACHHANGTableAdapter = new BTN_QLIVETAU.QLI_VETAUDataSet2TableAdapters.KHACHHANGTableAdapter();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -205,12 +205,12 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(147, 22);
             this.txtTenDangNhap.TabIndex = 20;
             // 
-            // txtSoDienThoai
+            // txtSDT
             // 
-            this.txtSoDienThoai.Location = new System.Drawing.Point(605, 347);
-            this.txtSoDienThoai.Name = "txtSoDienThoai";
-            this.txtSoDienThoai.Size = new System.Drawing.Size(155, 22);
-            this.txtSoDienThoai.TabIndex = 19;
+            this.txtSDT.Location = new System.Drawing.Point(605, 347);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(155, 22);
+            this.txtSDT.TabIndex = 19;
             // 
             // txtEmail
             // 
@@ -248,7 +248,7 @@
             this.Controls.Add(this.label_TenDangNhap);
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtTenDangNhap);
-            this.Controls.Add(this.txtSoDienThoai);
+            this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.txtEmail);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frm_QUANLYKHACHHANG";
@@ -275,7 +275,7 @@
         private System.Windows.Forms.Label label_TenDangNhap;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.TextBox txtTenDangNhap;
-        private System.Windows.Forms.TextBox txtSoDienThoai;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtEmail;
         private QLI_VETAUDataSet2 qLI_VETAUDataSet2;
         private System.Windows.Forms.BindingSource kHACHHANGBindingSource;
